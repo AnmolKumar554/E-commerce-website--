@@ -6,8 +6,10 @@ import App from './App.jsx'
 import Context from './components/Context.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <Context>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Context>
     
 )

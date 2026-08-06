@@ -26,6 +26,7 @@ const Nav = () => {
       <Link to={"/electronics"}>Electronics</Link>
       <Link to={"/living"}>Living</Link>
       <Link to={'/sports'}>Sports</Link>
+      <Link to={"/"}>Home</Link>
     </div>
     </>
   )

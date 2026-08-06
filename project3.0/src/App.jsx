@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from './components/Nav'
 import { Route, Routes } from 'react-router-dom'
 import Men from './components/Men'
@@ -7,7 +7,12 @@ import Kid from './components/Kid'
 import Elec from './components/Elec'
 import Living from './components/Living'
 import Sports from './components/Sports'
+import Home from './components/Home'
+import Login from './components/Login'
 const App = () => {
+
+  
+
   return (
     <div>
       <Nav></Nav>
@@ -18,8 +23,10 @@ const App = () => {
         <Route path='/electronics' element={<Elec />}></Route>
         <Route path="/living" element={<Living />}></Route>
         <Route path='/sports' element={<Sports />}></Route>
-        
+        <Route path='/' element={<Home />}></Route>
       </Routes>
+      {/* <Login></Login> */}
+      
     </div>
   )
 }
