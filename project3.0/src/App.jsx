@@ -9,6 +9,7 @@ import Living from './components/Living'
 import Sports from './components/Sports'
 import Home from './components/Home'
 import Login from './components/Login'
+import Cart from './components/Cart'
 const App = () => {
 
   
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/living" element={<Living />}></Route>
         <Route path='/sports' element={<Sports />}></Route>
         <Route path='/' element={<Home />}></Route>
+        <Route path='/cart' element={<Cart />}></Route>
       </Routes>
       {/* <Login></Login> */}
       

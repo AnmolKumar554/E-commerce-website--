@@ -7,7 +7,7 @@ const Context = (props) => {
   const [mensFashion, setMensFashion] = useState([
   {
     id: 1,
-    name: "Classic White T-Shirt",
+    name: "classic White T-Shirt",
     category: "T-Shirts",
     price: 599,
     state: "normal",
@@ -319,7 +319,7 @@ const Context = (props) => {
   },
   {
     id: 40,
-    name: "Classic Sunglasses",
+    name: "classic Sunglasses",
     category: "Accessories",
     price: 1199,
     state: "normal",
@@ -329,7 +329,7 @@ const Context = (props) => {
   const [womensFashion,setWomensFashion] = useState([
   {
     id: 1,
-    name: "Classic White Crop Tee",
+    name: "classic White Crop Tee",
     category: "Tops",
     price: 649,
     state: "normal",
@@ -417,11 +417,11 @@ const Context = (props) => {
   },
   {
     id: 12,
-    name: "Classic Leather Handbag",
+    name: "classic Leather Handbag",
     category: "Accessories",
     price: 1799,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,handbag"
+    image: "https://m.media-amazon.com/images/I/613yzL9z1zL._AC_UY1000_.jpg"
   },
   {
     id: 13,
@@ -429,7 +429,7 @@ const Context = (props) => {
     category: "Accessories",
     price: 549,
     state: "discount",
-    image: "https://images.unsplash.com/featured/?women,cap"
+    image: "https://m.media-amazon.com/images/I/51Aym1hgTNL._AC_UY1100_.jpg"
   },
   {
     id: 14,
@@ -437,7 +437,7 @@ const Context = (props) => {
     category: "Shorts",
     price: 949,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,running,shorts"
+    image: "https://rukmini1.flixcart.com/image/1500/1500/xif0q/short/p/0/h/xs-ab-sh-01-bl-activebug-original-imaha63vzcmknffj.jpeg?q=70"
   },
   {
     id: 15,
@@ -445,7 +445,7 @@ const Context = (props) => {
     category: "Sweatshirts",
     price: 2049,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,sweatshirt"
+    image: "https://m.media-amazon.com/images/I/91iK7Me6-0L._AC_UY1100_.jpg"
   },
   {
     id: 16,
@@ -453,7 +453,7 @@ const Context = (props) => {
     category: "Pants",
     price: 1749,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,office,pants"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7SKLo5hGKwTDvM-_8wqNALUfmBkDfTATOCoqSZr0El0hibHRYyQ0waik&s=10"
   },
   {
     id: 17,
@@ -461,7 +461,7 @@ const Context = (props) => {
     category: "Jackets",
     price: 3099,
     state: "special",
-    image: "https://images.unsplash.com/featured/?women,bomber,jacket"
+    image: "https://cdn.media.amplience.net/i/ego/CLN0008_CHWSEGJK08RDD661CJ_GR_25P2_base__75665?fmt=auto&qlt=default&w=auto&h=auto"
   },
   {
     id: 18,
@@ -469,7 +469,7 @@ const Context = (props) => {
     category: "Shirts",
     price: 1349,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,striped,shirt"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5qtOu8gv1Ca_YYJU3395eTKA7o292EvXabVstjl97MGNBqlOu8NNSxQo&s=10"
   },
   {
     id: 19,
@@ -477,7 +477,7 @@ const Context = (props) => {
     category: "Jeans",
     price: 1699,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,mom,jeans"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiTgH5MLxKU_erFdenLnaQxwBFtTfTHP3g-grfBiRb4UwmvfjxQTpO700&s=10"
   },
   {
     id: 20,
@@ -485,7 +485,7 @@ const Context = (props) => {
     category: "Hoodies",
     price: 1949,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,zip,hoodie"
+    image: "https://contents.mediadecathlon.com/p2730941/6ffec7995612c09ef3bcae95b28f1543/p2730941.jpg"
   },
   {
     id: 21,
@@ -493,7 +493,7 @@ const Context = (props) => {
     category: "Tops",
     price: 549,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,tank,top"
+    image: "https://m.media-amazon.com/images/I/61E5udqbb8L._AC_UY1100_.jpg"
   },
   {
     id: 22,
@@ -501,7 +501,7 @@ const Context = (props) => {
     category: "Blouses",
     price: 1549,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,floral,blouse"
+    image: "https://m.media-amazon.com/images/I/81SCR6lzMaL._AC_UY1100_.jpg"
   },
   {
     id: 23,
@@ -509,7 +509,7 @@ const Context = (props) => {
     category: "Pants",
     price: 1549,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,khaki,pants"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQReowGIy4Lc-gFddQLqwtyJk4_Ryjfzf5L4JEXK69tc8VEYfo2k_Yu0mI&s=10"
   },
   {
     id: 24,
@@ -517,7 +517,7 @@ const Context = (props) => {
     category: "Leggings",
     price: 1499,
     state: "discount",
-    image: "https://images.unsplash.com/featured/?women,leggings"
+    image: "https://www.jockey.in/cdn/shop/files/MW68_BLACK_0103_S223_JKY_1.webp?v=1702370251&width=560"
   },
   {
     id: 25,
@@ -525,7 +525,7 @@ const Context = (props) => {
     category: "Shirts",
     price: 1649,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,flannel,shirt"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsus5OCFbKJIa5TJFOVWrM9Z6xHn9TyrLeBuQ-ldUuBsICmO8mcc3nOgQt&s=10"
   },
   {
     id: 26,
@@ -533,7 +533,7 @@ const Context = (props) => {
     category: "Skirts",
     price: 1099,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,denim,skirt"
+    image: "https://www.only.in/cdn/shop/files/902111601_g2_763d612b-3123-4ada-95c1-efcb03c5dce4.jpg?v=1752845750&width=1080"
   },
   {
     id: 27,
@@ -541,7 +541,7 @@ const Context = (props) => {
     category: "Jackets",
     price: 3599,
     state: "trending",
-    image: "https://images.unsplash.com/featured/?women,puffer,jacket"
+    image: "https://www.only.in/cdn/shop/files/900781401_g0.jpg?v=1745910840&width=2048"
   },
   {
     id: 28,
@@ -549,7 +549,7 @@ const Context = (props) => {
     category: "Sweaters",
     price: 1849,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,sweater"
+    image: "https://m.media-amazon.com/images/I/81LfTCEC45L._AC_UY1100_.jpg"
   },
   {
     id: 29,
@@ -557,15 +557,15 @@ const Context = (props) => {
     category: "Accessories",
     price: 1899,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,crossbody,bag"
+    image: "https://ajantashoes.com/cdn/shop/files/VB8008_Creative_5.jpg?v=1768637560&width=2160"
   },
   {
     id: 30,
-    name: "Classic Oxford Blouse",
+    name: "classic Oxford Blouse",
     category: "Blouses",
     price: 1749,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,oxford,blouse"
+    image: "https://m.media-amazon.com/images/I/81UcdOzzHOL._AC_UY1100_.jpg"
   },
   {
     id: 31,
@@ -573,7 +573,7 @@ const Context = (props) => {
     category: "Jeans",
     price: 1949,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,boyfriend,jeans"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5TTSotQmuQ8Ni7KHVfd-eUQjfuXtrjfpUumX4_quaL01zo99VZu728L51&s=10"
   },
   {
     id: 32,
@@ -581,7 +581,7 @@ const Context = (props) => {
     category: "Tops",
     price: 1149,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,printed,top"
+    image: "https://littlewish.in/wp-content/uploads/2025/02/default_1_1_695e038a-5409-42a3-9fc5-7940bfe235a3.jpg"
   },
   {
     id: 33,
@@ -589,7 +589,7 @@ const Context = (props) => {
     category: "Sportswear",
     price: 949,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,gym,tank"
+    image: "https://assets.myntassets.com/w_412,q_50,,dpr_3,fl_progressive,f_webp/assets/images/2025/FEBRUARY/21/wjmzpO7D_475bb3fc671d474ca616bff3c4f2f9dc.jpg"
   },
   {
     id: 34,
@@ -597,7 +597,7 @@ const Context = (props) => {
     category: "Coats",
     price: 5199,
     state: "special",
-    image: "https://images.unsplash.com/featured/?women,wool,coat"
+    image: "https://m.media-amazon.com/images/I/61ub2vcGi4L._AC_UY1100_.jpg"
   },
   {
     id: 35,
@@ -605,7 +605,7 @@ const Context = (props) => {
     category: "Innerwear",
     price: 449,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,camisole"
+    image: "https://cdn.zivame.com/ik-seo/media/zcmsimages/configimages/ZI6100-White/1_medium/zivame-square-neck-camisole-white.jpg?t=1764664362"
   },
   {
     id: 36,
@@ -613,15 +613,15 @@ const Context = (props) => {
     category: "Footwear",
     price: 2599,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,white,sneakers"
+    image: "https://rukmini1.flixcart.com/image/1500/1500/xif0q/shoe/3/7/v/4-1006-34-killer-white-original-imahgf24sngpmhqf.jpeg?q=70"
   },
   {
     id: 37,
-    name: "Classic Block Heels",
+    name: "classic Block Heels",
     category: "Footwear",
     price: 3399,
     state: "discount",
-    image: "https://images.unsplash.com/featured/?women,heels"
+    image: "https://shopgnist.com/cdn/shop/files/GN-H-566-Black_1_1080x1080.jpg?v=1721724952"
   },
   {
     id: 38,
@@ -629,7 +629,7 @@ const Context = (props) => {
     category: "Footwear",
     price: 1849,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,flats"
+    image: "https://img.kwcdn.com/product/fancy/1d9e262e-4268-4b87-b750-81c58d8a3a7d.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp"
   },
   {
     id: 39,
@@ -637,7 +637,7 @@ const Context = (props) => {
     category: "Accessories",
     price: 2899,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,watch"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6F4peQOJnBUVxxK6wL6jWKO0XZXo2eI4vmNaI_9RwT8oHzaC-kKpHoIm4&s=10"
   },
   {
     id: 40,
@@ -645,7 +645,7 @@ const Context = (props) => {
     category: "Accessories",
     price: 1299,
     state: "normal",
-    image: "https://images.unsplash.com/featured/?women,cat-eye,sunglasses"
+    image: "https://m.media-amazon.com/images/I/612cCq3wJZL._AC_UY350_.jpg"
   }
 ]);
   const [kidsFashion,setKidsFashion] = useState([
@@ -1376,10 +1376,12 @@ const Context = (props) => {
   { id: 39, name: "Sports Whistle", category: "Accessories", price: 299, state: "normal", image: "https://images.unsplash.com/featured/?whistle" },
   { id: 40, name: "Agility Training Ladder", category: "Fitness", price: 1499, state: "trending", image: "https://images.unsplash.com/featured/?agility-ladder" }
 ]);
+  const [cart, setCart] = useState([])
 
+  const [total, setTotal] = useState(0)
   return (
     <div>
-      <contextData.Provider value={{mensFashion,setMensFashion,womensFashion,setWomensFashion,kidsFashion,setKidsFashion,elec,setElec,living,setLiving,sports,setSports}}>
+      <contextData.Provider value={{mensFashion,setMensFashion,womensFashion,setWomensFashion,kidsFashion,setKidsFashion,elec,setElec,living,setLiving,sports,setSports,cart,setCart,total,setTotal}}>
         {props.children}
       </contextData.Provider>
     </div>

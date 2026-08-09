@@ -14,7 +14,7 @@ const Home = () => {
   const count=0
   return (
     
-    <div>
+    <div className='ultra-main'>
         <div className='intro'>
           <h1>Find what fits your style.</h1>
           <p>Explore fashion, electronics, sports, and more — all in one place.</p>

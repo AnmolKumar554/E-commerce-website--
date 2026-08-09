@@ -4,7 +4,8 @@ import { contextData } from './Context'
 const Kid = () => {
 
   const {kidsFashion}=useContext(contextData)
-
+  const {cart,setCart}=useContext(contextData)
+  const {total,setTotal} = useContext(contextData);
   return (
     <div className='main-div'>
       {kidsFashion.map((el)=>{
@@ -20,7 +21,21 @@ const Kid = () => {
                   <span className='price'>₹{el.price}</span>
                   {/* <span className='old-price'>$79.99</span> */}
                 </div>
-                <button className='add-btn'>Add to Cart</button>
+                <button className='add-btn' onClick={()=>{
+                  setTotal(total+el.price)
+                  const newCart=[...cart]
+                  newCart.push({
+                    name:el.name,
+                    qty:1,
+                    price:el.price,
+                    image:el.image,
+                  })
+                  setCart(newCart)
+                  // console.log(cart);
+                                   
+                }}
+                
+                >Add to Cart</button>
               </div>
             </div>
         </>
