@@ -171,7 +171,7 @@ const Home = () => {
                 <Link to={'/living'}>View all</Link>
               </div>
               <div className='main-img'>
-                {sports.map((el)=>{
+                {living.map((el)=>{
                   if(el.state=="trending"){
                     return <>
                       <img src={el.image} id={el.id}></img>
@@ -189,7 +189,7 @@ const Home = () => {
                 <Link to={'/living'}>View all</Link>
               </div>
               <div className='main-img'>
-                {sports.map((el)=>{
+                {living.map((el)=>{
                   if(el.state=="special"){
                     return <>
                       <img src={el.image} id={el.id}></img>
@@ -207,7 +207,7 @@ const Home = () => {
                 <Link to={'/electronics'}>View all</Link>
               </div>
               <div className='main-img'>
-                {sports.map((el)=>{
+                {elec.map((el)=>{
                   if(el.state=="trending"){
                     return <>
                       <img src={el.image} id={el.id}></img>
@@ -225,7 +225,7 @@ const Home = () => {
                 <Link to={'/electronics'}>View all</Link>
               </div>
               <div className='main-img'>
-                {sports.map((el)=>{
+                {elec.map((el)=>{
                   if(el.state=="special"){
                     return <>
                       <img src={el.image} id={el.id}></img>

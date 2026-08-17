@@ -1,4 +1,4 @@
-import React, { use, useContext, useEffect } from 'react'
+import React, { use, useContext, useEffect, useState } from 'react'
 import Context, { contextData } from './Context'
 
 const Men = () => {
@@ -6,9 +6,11 @@ const Men = () => {
   const {mensFashion,setMensFashion}=useContext(contextData);
   const {cart,setCart}=useContext(contextData);
   const {total,setTotal} = useContext(contextData);
+  const [count, setCount] = useState(0)
   useEffect(() => {
     console.log(cart);
   }, [cart])
+  
   
   return (
     <div className='main-div'>
@@ -25,18 +27,20 @@ const Men = () => {
                   <span className='price'>₹{el.price}</span>
                   {/* <span className='old-price'>$79.99</span> */}
                 </div>
-                <button className='add-btn' onClick={()=>{
+                <button className='add-btn' id={el.id}   onClick={()=>{ 
                   setTotal(total+el.price)
                   const newCart=[...cart]
                   newCart.push({
                     id:el.id,
                     name:el.name,
-                    qty:1,
+                    qty:el.qty,
                     price:el.price,
                     image:el.image,
+                    total:el.price*el.qty
                   })
+                  
                   setCart(newCart)
-                  // console.log(cart);
+                  // Add to Cart
                                    
                 }}>Add to Cart</button>
               </div>

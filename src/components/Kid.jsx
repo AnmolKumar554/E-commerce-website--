@@ -25,10 +25,12 @@ const Kid = () => {
                   setTotal(total+el.price)
                   const newCart=[...cart]
                   newCart.push({
+                    id:el.id,
                     name:el.name,
-                    qty:1,
+                    qty:el.qty,
                     price:el.price,
                     image:el.image,
+                    total:el.price*el.qty
                   })
                   setCart(newCart)
                   // console.log(cart);
