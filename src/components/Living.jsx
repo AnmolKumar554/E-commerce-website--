@@ -8,7 +8,11 @@ const Living = () => {
   const {total,setTotal} = useContext(contextData);
   return (
     <div className='main-div'>
+
+      
       {living.map((el)=>{
+
+        const checkCart=cart.some((e)=> e.id===el.id)
         return <>
             <div className='card' id={el.id}>
               <div className='card-image'>
@@ -21,21 +25,12 @@ const Living = () => {
                   <span className='price'>₹{el.price}</span>
                   {/* <span className='old-price'>$79.99</span> */}
                 </div>
-                <button className='add-btn' onClick={()=>{
+                <button className='add-btn' disabled={checkCart} onClick={()=>{
                   setTotal(total+el.price)
                   const newCart=[...cart]
-              
-                  newCart.push({
-                    id:el.id,
-                    name:el.name,
-                    qty:el.qty,
-                    price:el.price,
-                    image:el.image,
-                    total:el.price*el.qty
-                  })
-                  
+                  newCart.push(el)
                   setCart(newCart)
-                }}>Add to Cart</button>
+                }}>{checkCart?"Added to Cart":"Add to Cart"}</button>
               </div>
             </div>
         </>

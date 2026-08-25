@@ -20,6 +20,7 @@ const Cart = () => {
     )
   }
 
+
   return (
     <div>
       <div className="page">
@@ -75,9 +76,9 @@ const Cart = () => {
         </>
       })}
         
-      <div className="empty-state" id="empty-state">
+      {/* <div className="empty-state" id="empty-state">
         <p className="empty-text">Your cart is empty.</p>
-      </div>
+      </div> */}
  
     </section>
  
@@ -101,9 +102,9 @@ const Cart = () => {
           <span id="total">₹{total+total*0.01.toFixed(2)}</span>
         </div>
         
-        <button className="checkout-btn" onClick={()=>{
+        <div className="checkout-btn" onClick={()=>{
           alert("yo twin iam not building that shit more, this is enough for understanding")
-        }}>Checkout</button>
+        }}>Checkout</div>
       </div>
     </aside>
  

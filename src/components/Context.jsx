@@ -7,7 +7,7 @@ const Context = (props) => {
   const [mensFashion, setMensFashion] = useState([
   {
     id: 1,
-    name: "classic White T-Shirt",
+    name: "Classic White T-Shirt",
     category: "T-Shirts",
     price: 599,
     state: "normal",

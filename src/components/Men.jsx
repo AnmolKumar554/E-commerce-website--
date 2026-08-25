@@ -11,10 +11,18 @@ const Men = () => {
     console.log(cart);
   }, [cart])
   
+  // function addToCart(el){
+  //   const newCart=[...cart]
+  //   newCart.push(el)
+  //   setCart(newCart)
+  // }
+
   
   return (
     <div className='main-div'>
       {mensFashion.map((el)=>{
+
+        const checkCart=cart.some((e)=> e.id===el.id)
         return <>
             <div className='card' key={el.id}>
               <div className='card-image'>
@@ -27,22 +35,13 @@ const Men = () => {
                   <span className='price'>₹{el.price}</span>
                   {/* <span className='old-price'>$79.99</span> */}
                 </div>
-                <button className='add-btn' id={el.id}   onClick={()=>{ 
+                <button className='add-btn' id={el.id} disabled={checkCart}  onClick={()=>{ 
+                  
                   setTotal(total+el.price)
                   const newCart=[...cart]
-                  newCart.push({
-                    id:el.id,
-                    name:el.name,
-                    qty:el.qty,
-                    price:el.price,
-                    image:el.image,
-                    total:el.price*el.qty
-                  })
-                  
-                  setCart(newCart)
-                  // Add to Cart
-                                   
-                }}>Add to Cart</button>
+                    newCart.push(el)
+                  setCart(newCart) 
+                }}>{checkCart?"Added to Cart":"Add to Cart"}</button>
               </div>
             </div>
         </>
