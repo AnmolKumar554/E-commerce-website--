@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { contextData } from './Context'
 
 const Women = () => {
@@ -6,41 +6,39 @@ const Women = () => {
   const {womensFashion}=useContext(contextData)
   const {cart,setCart}=useContext(contextData)
   const {total,setTotal} = useContext(contextData);
-  useEffect(() => {
-    console.log(cart);
-    
-  }, [cart])
+ 
+  function checkState(value){
+    if(value==='normal'){
+      return "none"
+    }
+  }
 
   return (
     <div className='main-div'>
-      {womensFashion.map((el)=>{
+      {womensFashion.map((e)=>{
+
+        const checkCart =cart.some((el)=> el.id===e.id)
+
         return <>
-            <div className='card' id={el.id}>
+            <div className='card' id={e.id}>
               <div className='card-image'>
-                <span className='badge trending'>{el.state}</span>
-                <img src={el.image} alt='Product' />
+                <span className='badge trending' style={{display:checkState(e.state)}}>{e.state}</span>
+                <img src={e.image} alt='Product' />
               </div>
               <div className='details'>
-                <h4 className='name'>{el.name}</h4>
+                <h4 className='name'>{e.name}</h4>
                 <div className='price-row'>
-                  <span className='price'>₹{el.price}</span>
+                  <span className='price'>₹{e.price}</span>
                   {/* <span className='old-price'>$79.99</span> */}
                 </div>
-                <button className={`add-btn`}  onClick={()=>{
-                  setTotal(total+el.price)
+                <button className={`add-btn`} disabled={checkCart}  onClick={()=>{
                   const newCart=[...cart]
-                  newCart.push({
-                    name:el.name,
-                    qty:1,
-                    price:el.price,
-                    image:el.image,
-                  })
+                  newCart.push(e)
                   setCart(newCart)
-                  // console.log(cart);
-                                   
+                  setTotal(total+e.price)
                 }}
                 
-                >Add to Cart</button>
+                >{checkCart?"Added to Cart":"Add to Cart"}</button>
               </div>
             </div>
         </>

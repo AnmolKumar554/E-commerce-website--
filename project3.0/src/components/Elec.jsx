@@ -6,13 +6,21 @@ const Elec = () => {
   const {elec}=useContext(contextData)
   const {cart,setCart} = useContext(contextData)
   const {total,setTotal} = useContext(contextData);
+
+  function checkState(value){
+    if(value==='normal'){
+      return "none"
+    }
+  }
+
   return (
     <div className='main-div'>
       {elec.map((el)=>{
+        const checkCart=cart.some((e)=> el.id==e.id)
         return <>
             <div className='card' id={el.id}>
               <div className='card-image'>
-                <span className='badge trending'>{el.state}</span>
+                <span className='badge trending' style={{display:checkState(el.state)}}>{el.state}</span>
                 <img src={el.image} alt='Product' />
               </div>
               <div className='details'>
@@ -21,17 +29,12 @@ const Elec = () => {
                   <span className='price'>₹{el.price}</span>
                   {/* <span className='old-price'>$79.99</span> */}
                 </div>
-                <button className='add-btn' onClick={()=>{
+                <button className='add-btn' disabled={checkCart} onClick={()=>{
                   setTotal(total+el.price)
                   const newCart=[...cart]
-                  newCart.push({
-                    name:el.name,
-                    qty:1,
-                    price:el.price,
-                    image:el.image,
-                  })
+                  newCart.push(el)
                   setCart(newCart)
-                }}>Add to Cart</button>
+                }}>{checkCart?"Added to Cart":"Add to Cart"}</button>
               </div>
             </div>
         </>

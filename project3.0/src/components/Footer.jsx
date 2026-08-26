@@ -15,32 +15,32 @@ const Footer = () => {
                 <a href='#' aria-label='YouTube'><i className="fa-brands fa-youtube"></i></a>
             </div>
         </div>
-
+        {/* <div className='main-col'> */}
         <div className='footer-col'>
-            <h4>Quick Links</h4>
-            <Link to={'/about'}>About Us</Link>
-            <Link to={'/contact'}>Contact Us</Link>
-            <Link to={'/careers'}>Careers</Link>
-            <Link to={'/blog'}>Blog</Link>
+                <h4>Quick Links</h4>
+                <Link to={'/'}>About Us</Link>
+                <Link to={'/'}>Contact Us</Link>
+                <Link to={'/'}>Careers</Link>
+                <Link to={'/'}>Blog</Link>
             
         </div>
 
         <div className='footer-col'>
-            <h4>Customer Service</h4>
-            <Link to={'/faq'}>FAQs</Link>
-            <Link to={'/shipping'}>Shipping Info</Link>
-            <Link to={'/returns'}>Returns & Refunds</Link>
-            <Link to={'/track'}>Track Order</Link>
+                <h4>Customer Service</h4>
+                <Link to={'/'}>FAQs</Link>
+                <Link to={'/'}>Shipping Info</Link>
+                <Link to={'/'}>Returns & Refunds</Link>
+                <Link to={'/'}>Track Order</Link>
         </div>
-
-        <div className='footer-col newsletter'>
+        {/* </div> */}
+        {/* <div className='footer-col-newsletter'>
             <h4>Stay Updated</h4>
             <p>Get updates on new arrivals and offers.</p>
             <div className='subscribe-box'>
                 <input placeholder='Enter your email'></input>
                 <button><i className="fa-solid fa-paper-plane"></i></button>
             </div>
-        </div>
+        </div> */}
 
         <div className='footer-bottom'>
             <p>© 2026 Euler Shop. All rights reserved.</p>
