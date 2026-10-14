@@ -1,10 +1,9 @@
 navbar
 about
-cart{whishlist,remove ,add }
+cart{remove ,add }
 search bar
 sections {}
 login ui
-profile ui
 contact
 
 responsivness

@@ -42,7 +42,7 @@ const Cart = () => {
         <div className="row" data-price="550" data-qty="1" id={e.id}>
         <img className="thumb" src={e.image} alt={e.name} />
         <div className="row-main">
-          <p className="row-line"><span className="item-name">{e.name}</span>&nbsp;&nbsp;<span className="item-qty">{e.qty}</span>x&nbsp;&nbsp;<span className="item-price">{e.price}</span></p>
+          <p className="row-line"><span className="item-name">{e.name}</span> <span className="item-qty">{e.qty}</span>x&nbsp;&nbsp;<span className="item-price">{e.price}</span></p>
           <div className="qty-controls">
             <span className="qty-btn" onClick={()=>{
               
@@ -103,7 +103,7 @@ const Cart = () => {
         </div>
         
         <div className="checkout-btn" onClick={()=>{
-          alert("yo twin iam not building that shit more, this is enough for understanding")
+          alert("this is enough for demo project")
         }}>Checkout</div>
       </div>
     </aside>

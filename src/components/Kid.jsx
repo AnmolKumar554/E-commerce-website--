@@ -6,6 +6,14 @@ const Kid = () => {
   const {kidsFashion}=useContext(contextData)
   const {cart,setCart}=useContext(contextData)
   const {total,setTotal} = useContext(contextData);
+
+  function checkState(value){
+    if(value==='normal'){
+      return "none"
+    }
+  }
+
+
   return (
     <div className='main-div'>
       {kidsFashion.map((el)=>{
@@ -14,7 +22,7 @@ const Kid = () => {
         return <>
             <div className='card' id={el.id}>
               <div className='card-image'>
-                <span className='badge trending'>{el.state}</span>
+                <span className='badge trending' style={{display:checkState(el.state)}}>{el.state}</span>
                 <img src={el.image} alt='Product' />
               </div>
               <div className='details'>

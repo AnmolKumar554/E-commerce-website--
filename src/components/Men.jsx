@@ -6,16 +6,17 @@ const Men = () => {
   const {mensFashion,setMensFashion}=useContext(contextData);
   const {cart,setCart}=useContext(contextData);
   const {total,setTotal} = useContext(contextData);
-  const [count, setCount] = useState(0)
+  const [vsble, setVsble] = useState(true)
   useEffect(() => {
     console.log(cart);
   }, [cart])
   
-  // function addToCart(el){
-  //   const newCart=[...cart]
-  //   newCart.push(el)
-  //   setCart(newCart)
-  // }
+  function checkState(value){
+    if(value==='normal'){
+      return "none"
+    }
+  }
+  
 
   
   return (
@@ -26,7 +27,7 @@ const Men = () => {
         return <>
             <div className='card' key={el.id}>
               <div className='card-image'>
-                <span className='badge trending'>{el.state}</span>
+                <span className='badge trending' style={{display:checkState(el.state)}}>{el.state}</span>
                 <img src={el.image} alt='Product' />
               </div>
               <div className='details'>
@@ -36,7 +37,6 @@ const Men = () => {
                   {/* <span className='old-price'>$79.99</span> */}
                 </div>
                 <button className='add-btn' id={el.id} disabled={checkCart}  onClick={()=>{ 
-                  
                   setTotal(total+el.price)
                   const newCart=[...cart]
                     newCart.push(el)

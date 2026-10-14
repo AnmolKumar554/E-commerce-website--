@@ -7,7 +7,11 @@ const Women = () => {
   const {cart,setCart}=useContext(contextData)
   const {total,setTotal} = useContext(contextData);
  
-  
+  function checkState(value){
+    if(value==='normal'){
+      return "none"
+    }
+  }
 
   return (
     <div className='main-div'>
@@ -18,7 +22,7 @@ const Women = () => {
         return <>
             <div className='card' id={e.id}>
               <div className='card-image'>
-                <span className='badge trending'>{e.state}</span>
+                <span className='badge trending' style={{display:checkState(e.state)}}>{e.state}</span>
                 <img src={e.image} alt='Product' />
               </div>
               <div className='details'>

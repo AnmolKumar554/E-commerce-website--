@@ -33,58 +33,58 @@ const Nav = () => {
       navigate("/electronics")
     }
   }
-
+  const handleSearch = (e) => {
+  e.preventDefault();                       
+  const value = text.trim();
+  if (value === "") {
+    alert("nothing to search");
+    return;
+  }
+  search(value);
+  setText("");
+};
   return (
     <>
-    <div class='navbar'>
-      <div className='logo-name'>
+    <div className="navbar">
+      <div className="logo-name">
         <h3>Euler Shop</h3>
       </div>
-      <div className='cart-search'>
-        <div className='search'>
-          <input placeholder='search to find' onKeyDown={(e)=>{
-            if(e.key=="Enter"){
-              if(text==""){
-                alert("nothing to search")
-              }else{
-                search(text)
-                setText('')
-              }
-            }
-          }} value={text} onChange={(e)=>{
-            setText(searchCorrection(e.target.value))
-          }}></input>
-          <button onClick={()=>{
-            if(text==""){
-              alert("nothing to search")
-            }else{
-              search(text)
-              setText("")
-            }
-          }} ><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
-        <Link to="/cart" className='sup-cart'>
-          <div className='cart'>
+ 
+      <div className="cart-search">
+        {/* a <form> handles both Enter key and button click, so no duplicated logic */}
+        <form className="search" onSubmit={handleSearch}>
+          <input
+            placeholder="search to find"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+          <button type="submit" aria-label="Search">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+ 
+        <Link to="/cart" className="sup-cart">
+          <div className="cart">
             <i className="fa-solid fa-cart-shopping"></i>
             <h4>Cart</h4>
           </div>
         </Link>
       </div>
     </div>
-    
-    <div className='navbar2'>
-      <div className='ham'>
-        <i className="fa-solid fa-bars" onClick={()=>{
-          setMenu(true)
-        }} ></i>
+ 
+    <div className="navbar2">
+      <div className="ham">
+        <button type="button" aria-label="Open menu" onClick={() => setMenu(true)}>
+          <i className="fa-solid fa-bars"></i>
+        </button>
       </div>
-      <Link to={"/men"}>Men's Fashion</Link>
-      <Link to={"/women"}>Women's Fashion</Link>
-      <Link to={"/kid"}>Kid's Fashion</Link>
-      <Link to={"/electronics"}>Electronics</Link>
-      <Link to={"/living"}>Living</Link>
-      <Link to={'/sports'}>Sports</Link>
-      <Link to={"/"}>Home</Link>
+      <Link to="/men">Men's Fashion</Link>
+      <Link to="/women">Women's Fashion</Link>
+      <Link to="/kid">Kid's Fashion</Link>
+      <Link to="/electronics">Electronics</Link>
+      <Link to="/living">Living</Link>
+      <Link to="/sports">Sports</Link>
+      <Link to="/">Home</Link>
     </div>
     {menu && <Login onClose={()=>{setMenu(false)}} />}
     </>
